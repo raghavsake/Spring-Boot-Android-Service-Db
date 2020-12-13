@@ -1,10 +1,9 @@
 databaseChangeLog:
   - changeSet:
       id: 1
-      author: raghavsake
       changes:
         - createTable:
-            tableName: potholelocation
+            tableName: PotholeLocation
             columns:
               - column:
                   name: id
