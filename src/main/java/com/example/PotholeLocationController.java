@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
+@RequestMapping("/pothole")
 public class PotholeLocationController {
 
     private PotholeRepository repository;
@@ -30,7 +31,7 @@ public class PotholeLocationController {
         return new ResponseEntity<PotholeLocation>(pl, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/pothole/add/{latitude},{longitde}", method = RequestMethod.POST)
+    @RequestMapping(value = "/add/{latitude},{longitde}", method = RequestMethod.POST)
     @ResponseBody
     public ResponseEntity<PotholeLocation> add(@PathVariable("latitude") String latitude, @PathVariable("longitude") String longitude) {
         PotholeLocation pl = new PotholeLocation();
@@ -40,7 +41,7 @@ public class PotholeLocationController {
         return new ResponseEntity<PotholeLocation>(pl, HttpStatus.OK);
     }
 
-    @RequestMapping(value ="/all/potholes")
+    @RequestMapping
     public List<PotholeLocation> all() {
         return repository.findAll();
     }

@@ -4,7 +4,7 @@ databaseChangeLog:
       author: raghavsake
       changes:
         - createTable:
-            tableName: PotholeLocation
+            tableName: potholelocation
             columns:
               - column:
                   name: id
