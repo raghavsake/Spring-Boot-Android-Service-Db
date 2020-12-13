@@ -1,0 +1,6 @@
+{
+  "name": "Spring Boot DataBase for Android",
+  "description": "",
+  "repository": "https://github.com/raghavsake/Spring-Boot-Android-Service-Db",
+  "addons" : [ "heroku-postgresql" ]
+}
