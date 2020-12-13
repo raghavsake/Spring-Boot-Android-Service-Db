@@ -41,10 +41,10 @@ public class PotholeLocationController {
         pl.setLatitude(latitude);
         pl.setLongitude(longitude);
         repository.save(pl);
-        return get(pl.getId());
+        return new ResponseEntity<PotholeLocation>(pl, HttpStatus.OK);
     }
 
-    @RequestMapping(value ="/all/potholes", method = RequestMethod.GET)
+    @RequestMapping(value ="/all/potholes")
     public List<PotholeLocation> all() {
         return repository.findAll();
     }
