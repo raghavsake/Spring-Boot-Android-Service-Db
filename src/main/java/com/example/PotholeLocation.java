@@ -15,10 +15,10 @@ public class PotholeLocation {
     private long id;
 
     @NotEmpty
-    String latitude;
+    private String latitude;
 
     @NotEmpty
-    String longitude;
+    private String longitude;
 
     public String getLatitude() {
         return latitude;
